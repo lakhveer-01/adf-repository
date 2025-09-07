@@ -1,0 +1,9 @@
+{
+	"name": "adf-course-bhati",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "23b034b0-345b-49fa-954b-d66cf77830f5",
+		"tenantId": "f4570973-3bbc-4591-9190-26aae4717cd3"
+	}
+}
