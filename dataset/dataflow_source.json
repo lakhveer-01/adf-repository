@@ -1,16 +1,17 @@
 {
-	"name": "sourcegit",
+	"name": "dataflow_source",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "linkedgit",
+			"referenceName": "linkedservicedl",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "lakhveer-01/adf-repository/refs/heads/main/Fact_Sales_2.csv"
+				"type": "AzureBlobFSLocation",
+				"folderPath": "csvfiles",
+				"fileSystem": "reporting"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

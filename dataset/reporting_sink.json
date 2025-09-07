@@ -1,16 +1,26 @@
 {
-	"name": "sourcegit",
+	"name": "reporting_sink",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "linkedgit",
+			"referenceName": "linkedservicedl",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file_name": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "lakhveer-01/adf-repository/refs/heads/main/Fact_Sales_2.csv"
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_file_name",
+					"type": "Expression"
+				},
+				"folderPath": "csvfiles",
+				"fileSystem": "reporting"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
