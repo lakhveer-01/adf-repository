@@ -1,0 +1,22 @@
+{
+	"name": "sourcegit",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedgit",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "lakhveer-01/adf-repository/refs/heads/main/Fact_Sales_2.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
